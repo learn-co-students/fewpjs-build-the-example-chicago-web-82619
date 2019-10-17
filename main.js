@@ -13,6 +13,10 @@ let colorStates = {
 };
 
 let articleHearts = document.querySelectorAll(".like");
+let errorBar = document.querySelector('#modal')
+errorBar.className = "modal"
+errorBar.style.visiblity = 'hidden'
+// errorBar.setAttribute("hidden", true);
 
 function likeCallback(e) {
   let heart = e.target;
