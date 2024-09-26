@@ -4,8 +4,21 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+let articleHearts = document.querySelectorAll(".like");
 
+for(let i = 0; i < articleHearts.length; i++){
+  articleHearts[i].innerHTML = "Like! " + EMPTY_HEART;
+  articleHearts[i].addEventListener("click",function(){
 
+    if(articleHearts[i].innerHTML == "Like! " + EMPTY_HEART){
+      articleHearts[i].innerHTML = "Like! " + FULL_HEART
+    } else {
+      articleHearts[i].innerHTML = "Like! " + EMPTY_HEART
+    }
+
+    mimicServerCall();
+  })
+}
 
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
